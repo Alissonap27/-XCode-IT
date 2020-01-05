@@ -26,8 +26,8 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         {!! Form::label('team_id', 'Time de Casa') !!}
-                        <select class="form-control"  name="team_id" id="team_id" v-model="teamId">
-                            <option v-if="opposingTeamId != team.id"  v-for="team in teams" :value="team.id"> @{{ team.name }}</option>
+                        <select class="form-control" name="team_id" id="team_id" v-model="teamId">
+                            <option :value="1"> Internacional</option>
                         </select>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
             teamLineup: [],
             ListTeamPlayers: [],
             teams: JSON.parse('{!! ($teams) !!}'),
-            teamId:'',
+            teamId:'1',
             opposingTeamId:'',
         },
         methods: {
@@ -91,8 +91,8 @@
                 this.ListTeamPlayers.splice(index, 1)
             },
         },
-        watch: {
-            "teamId": function(){ this.teamPlayers(this.teamId); this.teamLineup = [] },
+        created() {
+            this.teamPlayers(this.teamId);
         }
     })
 </script>
