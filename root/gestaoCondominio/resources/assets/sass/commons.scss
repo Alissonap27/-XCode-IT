@@ -1,0 +1,173 @@
+$primary: 'color-canoas';
+$color-primary: color($primary, 'base');
+$color-secondary: color($primary, 'accent-1');
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+main {
+	padding-bottom: 50px;
+}
+
+* {
+	font-family: Roboto;
+}
+
+.form-control:focus {
+    border-color: $color-primary !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px color($primary, 'lighten-4');
+}
+
+.panel-default > .panel-heading {
+    color: $color-heading !important;
+    background-color: $color-primary !important;
+}
+
+.icon {
+	height: 22px;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+.logo-footer{
+	max-width: 100px;
+	margin-top: -12px;
+	margin-left: -8px;
+	margin-bottom: -8px;
+}
+
+.jumbotron{
+	background-color: color('shades', 'white');
+	color: $color-primary !important;
+}
+
+.breadcrumb > li > a {
+    color: $color-primary !important;
+}
+
+.breadcrumb > li > a:hover, .breadcrumb > li > a:focus {
+    color: color($primary, 'darken-1') !important;
+}
+
+thead {
+	background-color: $color-primary;
+	color: $color-heading;
+}
+
+.required::before {
+	content: '*';
+    margin: 0 5px;
+    color: red;
+}
+
+.bullet-red {
+	color: red;
+}
+
+.bullet-red p {
+	color: black;
+}
+
+.icon-button{
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    padding: 0;
+    color: #337ab7;
+}
+
+.icon-button:hover .icon-button:focus{
+	color: #23527c;
+}
+
+.breadcrumb{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.user-icon-login{
+    margin-right: 6px;
+    &:before {
+        font-family: 'FontAwesome';
+        content: "\f007"; //fa fa-user icon
+    }
+}
+
+.tooltip > .tooltip-inner {
+    padding: 6px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.tooltip {
+    pointer-events: none !important;
+}
+
+.terms_and_conditions{
+    background: #eeeeee;
+    border: 1px solid #cecece;
+    padding: 12px;
+    border-radius: 7px;
+    text-align: justify;
+    margin-bottom: 2em;
+}
+
+.legend-section{
+    background: $color-secondary;
+    border: 1px solid #cecece;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.legend-receipt{
+    @extend .legend-section;
+    @extend .text-center;
+    font-size: 16px;
+}
+
+.panel-button{
+    @extend .panel-footer;
+    background-color: #fff;
+    border-top: none;
+    margin-right: 1em;
+}
+.content-receipt{
+    padding: 0 4em 4em 4em;
+}
+
+@media screen and (min-width: 992px) {
+    #link_search_cep {
+        padding-top: 2.5em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #link_search_cep {
+        padding-bottom: 2em;
+    }
+    .btn-inscription-type {
+        margin: 10px 0 !important;
+    }
+}
+
+[v-cloak] > * { display:none } //Vuejs initial message on load page
+[v-cloak]::before { content: "Carregando…" }

@@ -1,0 +1,74 @@
+.btn-action {
+    @extend .btn;
+    @extend .btn-primary;
+}
+.btn-login {
+    @extend .btn-action;
+}
+.btn-create {
+    @extend .btn-action;
+    @extend .pull-right;
+    margin-bottom: 10px;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f067'; //fa fa-plus icon
+        padding-right: 8px;
+    }
+}
+.btn-search {
+    @extend .btn-action;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f002'; //fa fa-search icon
+        padding-right: 8px;
+    }
+}
+.btn-clear {
+    @extend .btn;
+    @extend .btn-default;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f12d'; //fa fa-erase icon
+        padding-right: 8px;
+    }
+}
+.btn-save {
+    @extend .btn-action;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f00c'; //fa fa-check icon
+        padding-right: 8px;
+    }
+}
+.btn-print {
+    @extend .btn-action;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f02f'; //fa fa-print icon
+        padding-right: 8px;
+    }
+}
+.btn-back {
+    @extend .btn;
+    @extend .btn-default;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: '\f060'; //fa fa-arrow-left icon
+        padding-right: 8px;
+    }
+}
+
+.btn-inscription-type {
+    @extend .btn;
+    @extend .btn-success;
+    @extend .btn-lg;
+    @extend .text-uppercase;
+    width: 14em;
+    margin: 10px 2em;
+}
